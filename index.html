@@ -9,51 +9,53 @@
     <script type="text/javascript" src="./javascript.js" defer></script>
 </head>
 <body>
-    <div id="content">Content
-        <div id="mainImage">Main Image
-            <div id="logoBar">LogoBar
-                <img>
-                <h1>logoTxt</h1>
+    <div id="content">
+        <div id="mainImage">
+            <div id="logoBar" class="logoBar">
+                <img src="./noun-tiki-4946156.svg" alt="Tiki Head">
+                <h1>BEACHY STUFF</h1>
             </div>
         </div>
-        <div id="formArea">FormArea
-            <div id="description">Description Section
-                <p>This is not a real Online Service!!  You want this.  You need this.  It will Fufill your every desire.  Sign up now to get started.</p>
-                <p>You know that you want to.</p>
+        <div id="formArea">
+            <div id="description">
+                <p> This is <u>not</u> a real Online Service!!<br>You want this.  You need this.  It will fufill your every waking desire.  Sign up <em>now</em> to get started.</p>
             </div>
-            <div id="formSection"> FORM SECTION
+            <div id="formSection">
                 <form action="/my-form-section" method="post">
+                    <fieldset>
+                    <legend>You <em>know</em> that you want to.</legend>
                     <ul>
                         <li>
                             <label for="firstName">FIRST NAME</label>
-                            <input type="text" id="firstName" name="user_firstName" value="First Name" />
+                            <input type="text" id="firstName" name="user_firstName" pattern="[a-zA-Z0-9]+" />
                         </li>
                         <li>
                             <label for="lastName">LAST NAME</label>
-                            <input type="text" id="lastName" name="user_lastName" value="Last Name" />
+                            <input type="text" id="lastName" name="user_lastName" pattern="[a-zA-Z0-9]+"/>
                         </li>
                         <li>
                             <label for="mail">EMAIL</label>
-                            <input type="email" id="mail" name="user_email" value="user_email" />
+                            <input type="email" id="mail" name="user_email"  />
                         </li>
                         <li>
                             <label for="tel">PHONE NUMBER</label>
-                            <input type="tel" id="tel" name="tel" value="123-456-7890" />
+                            <input type="tel" id="tel" name="tel"  pattern="\d{3}[\-]\d{3}[\-]\d{4}"/>
                         </li>
                         <li>
                             <label for="pwd">PASSWORD</label>
-                            <input type="password" id="pwd" name="pwd" />
+                            <input type="password" id="pwd" name="pwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/>
                         </li>
                         <li>
-                            <label for="pwdConf">CONFIRM PASSWORD</label>
+                            <label for="pwdConf">CONFIRM</label>
                             <input type="password" id="pwdConf" name="pwdConf" />
                         </li>
                     </ul>
+                    </fieldset>
+                    <div id="butSection">
+                        <button type="submit" id="createAccount">Create Account</button>
+                       <p>Already have an account? <a href="http://google.com">Log in</a></p>
+                   </div>
                 </form>
-                <div id="butSection">
-                    <button id="createAccount">Create Account</button>
-                    <p>Already have an account? <a href="http://google.com">Log in</a></p>
-                </div>
             </div> 
         </div>
     </div>
